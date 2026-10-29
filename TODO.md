@@ -2,11 +2,11 @@
 
 ## Prima di pubblicare
 
-- [ ] Scegliere dominio e hosting
-- [ ] Nominare il provider di hosting scelto nell'informativa privacy (`privacy.html`)
-- [ ] Verificare che l'hosting scelto non imposti cookie di propria iniziativa
-- [ ] Controllare dove si trovano i server dell'hosting scelto (per l'informativa privacy)
-- [ ] Aggiungere canonical, sitemap.xml e robots.txt se necessario, una volta noto il dominio
+- [x] Scegliere dominio e hosting (dominio `laboulangeriedelcorso.it` su Aruba, hosting GitHub Pages)
+- [x] Nominare il provider di hosting scelto nell'informativa privacy (`privacy.html`)
+- [x] Verificare che l'hosting scelto non imposti cookie di propria iniziativa (GitHub Pages non imposta cookie su un dominio personalizzato per contenuti statici)
+- [x] Controllare dove si trovano i server dell'hosting scelto (GitHub, Inc. — Stati Uniti; indicato in `privacy.html`)
+- [ ] Aggiungere canonical, sitemap.xml e robots.txt se necessario, ora che il dominio è noto (`laboulangeriedelcorso.it`)
 
 ## Da aggiungere quando il titolare li fornisce
 
