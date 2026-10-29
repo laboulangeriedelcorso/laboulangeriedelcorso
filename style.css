@@ -1,0 +1,351 @@
+/* la Boulangerie del Corso — foglio di stile unico, nessun framework */
+
+:root {
+  --brown: #7F6B52;
+  --cream: #F6EFE3;
+  --dark: #3B3026;
+  --white: #FFFFFF;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--dark);
+  outline-offset: 2px;
+}
+
+.site-header :focus-visible,
+.site-footer :focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
+}
+
+/* Skip link */
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  background: var(--dark);
+  color: var(--white);
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header: una sola riga sottile, logo dritto a sinistra */
+
+.site-header {
+  background: var(--brown);
+  color: var(--white);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.header-inner {
+  padding: 0.5rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-emblem {
+  height: 1.9rem;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--white);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 0.3rem 0.05rem;
+  font-size: 1rem;
+}
+
+.site-nav a:hover {
+  border-bottom-color: var(--white);
+}
+
+/* Bottoni */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.6rem;
+  background: var(--white);
+  color: var(--dark);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  border: 2px solid var(--white);
+  border-radius: 0.4rem;
+  box-shadow: 0 6px 16px rgba(59, 48, 38, 0.25);
+}
+
+.btn:hover {
+  background: var(--cream);
+  border-color: var(--cream);
+}
+
+.btn-header {
+  display: none;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--dark);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.btn-dark {
+  background: var(--dark);
+  color: var(--white);
+  border: 2px solid var(--dark);
+}
+
+.btn-dark:hover {
+  background: transparent;
+  color: var(--dark);
+}
+
+/* Sezioni */
+
+.section {
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(59, 48, 38, 0.15);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section h1,
+.section h2 {
+  font-family: var(--font-serif);
+  color: var(--dark);
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.6rem;
+  position: relative;
+}
+
+.section h1 {
+  font-size: 1.9rem;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+}
+
+.section h1 + h2,
+.section p + h2 {
+  margin-top: 2.25rem;
+}
+
+.section h1::after,
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 3px;
+  background: var(--brown);
+  border-radius: 2px;
+}
+
+.section p {
+  margin: 0 0 1rem;
+  max-width: 60ch;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+/* Galleria: due foto vicine, stesso allineamento del testo */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 24px rgba(59, 48, 38, 0.18);
+}
+
+.gallery img:first-child {
+  object-position: center 15%;
+}
+
+.gallery img:last-child {
+  object-position: center 65%;
+}
+
+/* Dove siamo: due colonne, testo e blocco marrone con il pin */
+
+.section-dove-siamo {
+  background: var(--white);
+}
+
+.dove-siamo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.dove-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.address {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  margin: 0 0 1.75rem;
+}
+
+.dove-media {
+  background: var(--brown);
+  border-radius: 0.6rem;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(59, 48, 38, 0.18);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid rgba(59, 48, 38, 0.15);
+  padding: 2.25rem 1.25rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(59, 48, 38, 0.85);
+}
+
+.site-footer a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 48, 38, 0.55);
+  font-weight: 700;
+  color: var(--dark);
+  padding-bottom: 0.1rem;
+}
+
+.site-footer a:hover {
+  border-bottom-color: var(--dark);
+}
+
+/* Tablet / desktop */
+
+@media (min-width: 768px) {
+  .btn-header {
+    display: inline-flex;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dove-siamo-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+  }
+
+  .dove-media {
+    min-height: 220px;
+  }
+}
